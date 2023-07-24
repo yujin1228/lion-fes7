@@ -71,6 +71,32 @@ body{
     overflow: hidden;
 }
 
+.eye-out {
+    content: " ";
+    display: block;
+    width: 122px;
+    height: inherit;
+    border-radius:50% / 50%;
+    position: absolute;
+    background-color: #FFAFE7;
+    clip: rect(0,122px,0px,0px);
+    animation: eye-blink 3s infinite;
+}
+
+.eye-out::after {
+    content: " ";
+    display: block;
+    position: absolute;
+    top: 20px;
+    left: 26px;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+	border: 3px solid;
+	border-color: transparent transparent black black;
+	transform: rotate(-45deg);
+}
+
 .left .eye-in {
     float: right;
     width: 116px;
@@ -114,6 +140,11 @@ body{
     overflow: hidden;
 
 }
+
+.right .eye-out{
+    transform: translateY(-125px);
+}
+
 
 .right .eye-in {
     width: 116px;
@@ -201,7 +232,7 @@ body{
     border-right: 3px solid black;
 }
 
-.mouth .left{
+.mouth *{
     position: absolute;
     width: 25px;
     height: 25px;
@@ -212,15 +243,8 @@ body{
 
 }
 
-.mouth .right {
-    position: absolute;
-    width: 25px;
-    height: 25px;
+.mouth .right {   
     left: 28px;
-    border-radius: 50%;
-	border: 3px solid;
-	border-color: transparent transparent black black;
-	transform: rotate(-45deg);
 }
 
 /*tiger pattern -------------------------*/
@@ -452,44 +476,82 @@ svg.arm-right {
 
 /* trwinkle star -------------------------*/
 .stars {
-    width: 100px;
-    height: 100px;
+    width: 50px;
+    height: 50px;
     display: flex;
     justify-content: center;
     align-items: center;
-    position: relative;
+    position: absolute;
 }
 
 .stars * {
     position: absolute;
-    width: 33%;
-    height: 33%;
+    /* width: 33%;
+    height: 33%; */
     background-color: #ffffff;
     border-radius:50% ;
+    z-index: -100;
 }
 
-.stars div:nth-child(1) {
+/* .stars div:nth-child(1) {
     width: 35%;
     height: 35%;
-}
+} */
 
-.stars div:nth-child(2) {
-    width: 33%;
+.stars div:nth-child(1) {
+    /* width: 33%; */
     height: 33%;
     animation: twinkle 2s ease-in-out infinite;
 }
 
-.stars div:nth-child(3) {
-    width: 33%;
+.stars div:nth-child(2) {
+    /* width: 33%; */
     height: 33%;
     transform: rotate(90deg);
     animation: twinkle 2s ease-in-out infinite;
 }
 
-.star2 {
-    top: 30%;
-    left: 30%;
-    width: 50px;
-    height: 50px;
+
+/* star-position -------------------------*/
+
+.star-center {
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    /* background-color: red; */
 }
 
+.star1 {
+    transform: translate(250px,-220px);  
+}
+
+
+.star2 {
+    width: 35px;
+    transform: translate(320px,-30px);  
+}
+
+.star3 {
+    transform: translate(200px,150px);
+}
+
+.star4 {
+    width: 35px;
+    transform: translate(-250px,-220px);  
+}
+
+.star5 {
+    transform: translate(-320px,-30px);  
+}
+
+.star6 {
+    width: 35px;
+    transform: translate(-200px,150px);
+}
+
+.star2 div:nth-child(1),.star2 div:nth-child(2),
+.star4 div:nth-child(1),.star4 div:nth-child(2),
+.star6 div:nth-child(1),.star6 div:nth-child(2) {
+    animation-delay: 1s;
+}

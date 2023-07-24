@@ -5,7 +5,7 @@
     }
     50% {
         width: 100%;
-        box-shadow: 0 0 10px 3px #ffffff;
+        box-shadow: 0 0 8px 1px #ffffff;
     }
     100% {
         width: 33%;
@@ -14,7 +14,21 @@
 
 /* eye blink */
 @keyframes eye-blink {
-
+    0% {
+        clip: rect(0,122px,0px,0px);
+    }
+    10% {
+        clip: rect(0,122px,0px,0px);
+    }
+    20% {
+        clip: rect(0,122px,150px,0px);
+    }
+    30% {
+        clip: rect(0,122px,0px,0px);
+    }
+    100% {
+        clip: rect(0,122px,0px,0px);
+    }
 }
 
 

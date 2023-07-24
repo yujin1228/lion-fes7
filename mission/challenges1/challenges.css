@@ -1,0 +1,56 @@
+/* html{
+    height: 100%;
+} */
+body{
+    background-image:url(./images/bg.png);
+    height: 100vh;
+    /* display: flex;
+    justify-content: center;
+    align-items: center;  */
+}
+
+.box{
+    width: 300px;
+    height: auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate( -50%, -50%);
+}
+
+.box>img{
+    /* 베이스라인 제거 */
+    vertical-align: bottom;
+}
+
+.ground{
+    /* width: 300px; */
+    margin-top: 0;
+    background-color: #9C6035;
+    border-radius: 0 0 30px 30px;
+    border-bottom: 10px solid #46260E;
+}
+
+.text{
+    margin: 10px 20px 40px 20px;
+}
+
+.text *{
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+}
+
+h1{
+    font-size: 36px;
+    font-weight: 700;
+    color: #FFFFFF;
+}
+
+p{
+    font-size: 16px;
+    font-weight: 400;
+    color: #E8BC9C;
+    padding-top: 10px;
+}
+
+

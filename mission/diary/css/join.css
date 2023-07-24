@@ -1,0 +1,11 @@
+.btn-login {
+    display: inline-flex;
+    height: 40px;
+    padding: 0 20px 0 52px;
+    background-color: #fff;
+    background-image: url(../img/icon-login.svg);
+    background-repeat: no-repeat;
+    background-size: 32px;
+    background-position: 10px 50%;
+    align-items: center;
+  }

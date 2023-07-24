@@ -1,0 +1,495 @@
+/* font --------------------------------- */
+@font-face {
+    font-family: 'PyeongChangPeace-Bold';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2206-02@1.0/PyeongChangPeace-Bold.woff2') format('woff2');
+    font-weight: 700;
+    font-style: normal;
+}
+
+
+body{
+    height: 100vh;
+    background: linear-gradient(180deg, rgba(179,217,239,1) 0%, rgba(248,221,234,1) 50%, rgba(228,224,255,1) 100%);
+}
+
+
+.center{   
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    height: 420px;
+    padding: 50px;
+    transform: translate(-50%, -50%);
+}
+
+.character {
+    position: relative;
+    width: 305px;
+}
+
+.character>*{
+    position: absolute;
+    top:0;
+    /* 가로가운데정렬 */
+    left: 50%;
+    transform: translate(-50%, 0);
+}
+
+
+
+/* face section -------------------------*/
+.face-over {
+    top: 20px;
+}
+.face {
+    width: 300px;
+    height: 238px;
+    background-color: #ffffff;
+    border: 3px solid black;
+    border-radius:50% / 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    position: relative;
+    
+}
+
+.eye {
+    width: 304px;
+    display: flex;
+    justify-content: space-between;
+    margin: 0 -2px;
+}
+
+/* left-eye -------------------------*/
+.left .eye-border {
+    width: 122px;
+    height: 153px;
+    border-radius:50% / 50%;
+    border: 3px solid black;
+    overflow: hidden;
+}
+
+.left .eye-in {
+    float: right;
+    width: 116px;
+    height: 130px;
+    margin-top: -5px;
+    margin-right: -5px; 
+    background-color: #BDF6FE;
+    border-radius:50% / 50%;
+}
+
+/* heart */
+.left .eye-in::after {
+    content: " ";
+    display: block;
+    height: 48px;
+    transform: translateY(-60px);
+    background-image: url("./img/heart.svg");
+    background-repeat: no-repeat;
+    background-position: right center;
+    margin-right: 19px;
+}
+
+.left .eye-in::before {
+    content: " ";
+    display: block;
+    width: 94px;
+    height: 104px;
+    margin-left: 22px;
+    transform: translateY(13px);
+    background-color: black;
+    border-radius:50% / 50%;
+}
+
+
+/* rigth-eye -------------------------*/
+.right .eye-border {
+    width: 122px;
+    height: 153px;
+    border-radius:50% / 50%;
+    border: 3px solid black;
+    overflow: hidden;
+
+}
+
+.right .eye-in {
+    width: 116px;
+    height: 130px;
+    margin-top: -5px;
+    margin-left: -5px;
+    background-color: #BDF6FE;
+    border-radius:50% / 50%;
+}
+
+/* heart */
+.right .eye-in::after {
+    content: " ";
+    display: block;
+    height: 48px;
+    transform: translateY(-60px);
+    background-image: url("./img/heart.svg");
+    background-repeat: no-repeat;
+    margin-left: 19px;
+}
+
+.right .eye-in::before {
+    content: " ";
+    display: block;
+    width: 94px;
+    height: 104px;
+    transform: translateY(13px);
+    background-color: black;
+    border-radius:50% / 50%;
+}
+
+/* eye-cover -------------------------*/
+.eye-cover {
+    display: flex;
+    justify-content: space-between;
+    width: 304px;
+    margin: 0 -2px;
+    position: absolute;
+    bottom: 52px;
+    /* background-color: red; */
+}
+
+.eye-cover::after{
+    content: " ";
+    display: block;
+    width: 100%;
+    height: 45px;
+    position: absolute;
+    background-color: #ffffff;
+    transform: translateY(15px);
+}
+
+.eye-cover>*{
+    width: 120px;
+    height: 32px;
+    border-radius:50% / 50%;
+    border: 3px solid black;
+    background-color: #ffffff;
+} 
+
+/* nose -------------------------*/
+.nose {
+    width: 20px;
+    height: 12px;
+    border-radius:50% / 50%;
+    background-color: #F8DCAD;
+    position: absolute;
+    bottom: 72px;
+}
+
+/* mouth -------------------------*/
+.mouth {
+    position: absolute;
+    width: 58px;
+    height: 10px;
+    bottom: 72px;
+}
+
+.mouth::after{
+    position: absolute;
+    content: " ";
+    display: block;
+    width: 28px;
+    height: 16px;
+    border-right: 3px solid black;
+}
+
+.mouth .left{
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+	border: 3px solid;
+	border-color: transparent transparent black black;
+	transform: rotate(-45deg);
+
+}
+
+.mouth .right {
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    left: 28px;
+    border-radius: 50%;
+	border: 3px solid;
+	border-color: transparent transparent black black;
+	transform: rotate(-45deg);
+}
+
+/*tiger pattern -------------------------*/
+
+/* 이마 부분 무늬 */
+.tiger1 {
+    width: 10px;
+    height: 80px;
+    border-radius:50% / 50%;
+    background-color: black;
+    position: absolute;
+    top: -40px;
+}
+.tiger1::before {
+    content: " ";
+    display: block;
+    width: 40px;
+    height: 7px;
+    border-radius:50% / 50%;
+    background-color: black;
+    position: absolute;
+    left: -15px;
+    bottom: 26px;
+    
+}
+
+.tiger1::after {
+    content: " ";
+    display: block;
+    width: 40px;
+    height: 7px;
+    border-radius:50% / 50%;
+    background-color: black;
+    position: absolute;
+    left: -15px;
+    bottom: 16px;
+}
+
+/* 눈썹 무늬 */
+.tiger2 {
+    position: absolute;
+    width: 100px;
+    display: flex;
+    justify-content: space-between;
+    top: 38px;
+}
+
+.tiger2 *{
+    width: 30px;
+    height: 15px;
+    background-image: url(./img/tiger.svg);
+    background-repeat: no-repeat;
+}
+
+.tiger2 .right{
+    transform: rotate(-45deg);
+}
+
+.tiger2 .left{
+    transform: rotate(45deg);
+}
+
+/* 볼 부분 무늬 */
+
+.tiger3 {
+    position: absolute;
+    width: 280px;
+    display: flex;
+    justify-content: space-between;
+    bottom: 28px;
+}
+
+.tiger3 *{
+    width: 60px;
+    height: 50px;
+    background-image: url(./img/tigerFace.svg);
+    background-repeat: no-repeat;
+}
+
+.tiger3 .right {
+    transform: scaleX(-1);
+}
+
+/* ear section -------------------------*/
+.ear {
+    display: flex;
+    width: 300px;
+    height: fit-content;
+    justify-content: space-between;
+    bottom: 28px;
+    
+}
+.ear * {
+    width: 140px;
+    height: 130px;
+    border: 3px solid black;
+    /* background-color: #ffffff; */
+    border-radius:50% / 50%;
+    background: radial-gradient(#F8DCAD 45%, #ffffff 50%);
+}
+.ear .left {
+    transform: rotate(-40deg);
+}
+
+.ear .right {
+    transform: rotate(40deg);
+}
+
+/* body section -------------------------*/
+.body {
+    width: 100px;
+    height: 200px;
+    top: 230px;
+    z-index: -1;
+}
+
+.body .left {
+    position: relative;
+}
+
+.leg {
+    position: absolute;
+    width: 70px;
+    height: 188px;
+    border: 3px solid black;
+    background-color: #ffffff;
+    border-radius:50% / 50%;
+    transform: rotate(3deg);
+}
+
+.body-right {
+    position: absolute;
+    right: 0;
+    width: 50px;
+    height: 127px;
+    border: 3px solid black;
+    background-color: #ffffff;
+    border-radius:50% / 50%;
+    transform: rotate(-10deg);
+}
+
+.body-right::after {
+    position: absolute;
+    content: " ";
+    display: block;
+    width: 20px;
+    height: 100px;
+    border-radius:50% / 50%;
+    background-color: #ffffff;
+    transform: rotate(10deg);
+    left: -5px;
+}
+
+.leg-right {
+    position: absolute;
+    top: 60px;
+    right: -18px;
+    width: 59px;
+    height: 75px;
+    border: 3px solid black;
+    background-color: #ffffff;
+    border-radius:50% / 50%;
+}
+
+/* arm-svg section */
+svg.arm-left {
+    transform: translate(0, 0);
+    left: -80px;
+    z-index: -2;
+}
+
+svg.arm-right {
+    transform: translate(0, 0);
+    top: 220px;
+    z-index: -2;
+}
+
+
+/* text section -------------------------*/
+.text {
+    position: absolute;
+    font-family:'PyeongChangPeace-Bold';
+    font-style: italic;
+    height: 200px;
+    /* background-color: #BDF6FE; */
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%, -0);
+    text-align: center;
+}
+
+.text * {
+    margin: 0;
+    color: #ffffff;
+    -webkit-text-stroke: 1px rgb(68, 120, 250);
+    text-shadow: 3px 1px 1px #8ff7fd, 2px 2px 1px #6996ff, 4px 2px 1px #8ff7fd,
+    3px 3px 1px #6996ff, 5px 3px 1px #8ff7fd, 4px 4px 1px #6996ff,
+    6px 4px 1px #8ff7fd, 5px 5px 1px #6996ff, 7px 5px 1px #8ff7fd,
+    6px 6px 1px #6996ff;
+}
+
+.text h1 {
+    margin-top: -20px;
+    margin-left: 40px;
+    font-size: 100px;
+    /* animation: text-slide1 1.5s ease-in-out infinite; */
+}
+
+.text h2 {
+    margin-right: 50px;
+    font-size: 60px;
+    /* animation: text-slide2 1.5s ease-in-out infinite; */
+}
+
+/* hover-animation*/
+.center:hover ~ .text>h2 {
+    animation: text-slide2 1.2s ease-in-out;
+}
+.center:hover ~ .text>h1 {
+    animation: text-slide1 1.2s ease-in-out;
+}
+.center:hover .character {
+    animation: fly 1.2s ease-in-out;
+}
+
+
+
+
+
+/* trwinkle star -------------------------*/
+.stars {
+    width: 100px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.stars * {
+    position: absolute;
+    width: 33%;
+    height: 33%;
+    background-color: #ffffff;
+    border-radius:50% ;
+}
+
+.stars div:nth-child(1) {
+    width: 35%;
+    height: 35%;
+}
+
+.stars div:nth-child(2) {
+    width: 33%;
+    height: 33%;
+    animation: twinkle 2s ease-in-out infinite;
+}
+
+.stars div:nth-child(3) {
+    width: 33%;
+    height: 33%;
+    transform: rotate(90deg);
+    animation: twinkle 2s ease-in-out infinite;
+}
+
+.star2 {
+    top: 30%;
+    left: 30%;
+    width: 50px;
+    height: 50px;
+}
+

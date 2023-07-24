@@ -1,0 +1,55 @@
+/* twinkle stars */
+@keyframes twinkle {
+    0% {
+        width: 33%;
+    }
+    50% {
+        width: 100%;
+        box-shadow: 0 0 10px 3px #ffffff;
+    }
+    100% {
+        width: 33%;
+    }
+}
+
+/* eye blink */
+@keyframes eye-blink {
+
+}
+
+
+/* beam */
+
+/* character fly */
+@keyframes fly {
+    0% {
+        transform: translate(0,0);
+    }
+    100%{
+        
+        transform: translate(0,-1000px);
+    }
+}
+
+
+
+/* text slide */
+@keyframes text-slide1 {
+    0% {
+        opacity: 100;
+    }
+    100%{
+        opacity: 0;
+        transform: translate(500px,0);
+    }
+}
+
+@keyframes text-slide2 {
+    0% {
+        opacity: 100;
+    }
+    100%{
+        opacity: 0;
+        transform: translate(-500px,0);
+    }
+}

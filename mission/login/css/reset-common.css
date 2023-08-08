@@ -94,3 +94,25 @@ button:hover {
     border: 1px solid var(--touch-blue);
     border-radius: 5px;
 }
+
+/*미디어쿼리*/
+@media only screen and (max-width: 519px) {
+    .modal-content {
+        width: 100%;
+    }
+
+    .login {
+        width: 100%;
+    }
+}
+
+
+@media only screen and (min-width: 520px) {
+    .modal-content {
+        width: 520px;
+    }
+
+    .login {
+        width: 500px;
+    }
+}

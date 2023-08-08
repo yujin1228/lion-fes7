@@ -12,7 +12,6 @@
 
 .modal-content {
     /* position: fixed; */
-    width: 32.5rem;
     height: fit-content;
     background-color: var(--white);
     border-radius: 10px;

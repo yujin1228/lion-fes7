@@ -1,0 +1,92 @@
+html {
+  font-size: 10px;
+}
+ul,
+li {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+button {
+  cursor: pointer;
+  border: none;
+}
+
+.custom-select {
+  position: relative;
+  padding-bottom: 0.8rem;
+}
+
+/* 셀렉트 박스 */
+.btn-select {
+  width: 20rem;
+  height: 4rem;
+  border-radius: 1rem;
+  border: 1px solid #c4c4c4;
+  background: #fff;
+  text-align: left;
+  padding: 0 1em;
+  position: relative;
+}
+.btn-select.on,
+.btn-select:focus {
+  outline: none;
+  border-color: #9B51E0;
+  box-shadow: 0 0 0 3px #F8E4FF;
+}
+
+/* 화살표 모양 */
+.btn-select::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: 1em;
+  margin-top: -0.5rem;
+  box-sizing: border-box;
+  border-top: 0.8rem solid #c4c4c4;
+  border-left: 0.5rem solid transparent;
+  border-right: 0.5rem solid transparent;
+  transition: transform 0.3s;
+}
+/* 활성화 시 화살표 회전 */
+.btn-select.on::after {
+  transform: rotate(-180deg);
+}
+
+/* 리스트 */
+.list {
+  position: absolute;
+  top: 4.8rem;
+  left: 0;
+  z-index: 1;
+  width: 20rem;
+  border: 1px solid #c4c4c4;
+  border-radius: 1rem;
+  background: #fff;
+  box-shadow: 4px 4px 14px rgba(0, 0, 0, 0.15);
+
+  /* 변동값 */
+  display: none;
+}
+.btn-select.on + .list {
+  display: block;
+}
+.list li {
+  padding: 0.5rem 0.8rem;
+}
+.list button {
+  width: 100%;
+  height: 100%;
+  text-align: left;
+  border-radius: 0.8rem;
+  height: 4rem;
+  background: #fff;
+  transition: background-color 0.3s;
+}
+.list li button:hover,
+.list li button:focus {
+  background-color: #F8E4FF;
+}
+.list li button:focus {
+  outline: 1px solid #9B51E0;
+}

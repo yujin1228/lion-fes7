@@ -1,0 +1,122 @@
+/*common section*/
+.content {
+    width: 1189px;
+    height: 100%;
+    margin: 0 auto;
+}
+
+.box {
+    width: fit-content;
+    background-color: var(--gray1);
+    border: 2px solid var(--gray3);
+    border-radius: 15px;
+    padding: 28px;
+}
+
+/*header section*/
+.box header {
+    text-align: center;
+    width: 100%;
+}
+
+.box header h1 {
+    font-size: 24px;
+    font-weight: 700;
+}
+
+.movie-select li{
+    float: left;
+}
+
+.movie-select button {
+    font-weight: 500;
+}
+
+/*main section*/
+.movie-wrap {
+    width: 100%;
+    background-color: var(--white);
+    border: 2px solid var(--gray3);
+    border-radius: 15px;
+    display: grid;
+    /* grid-template-columns: repeat(4, 1fr); */
+    gap: 23px;
+    padding: 26px 27px;
+}
+
+.movie-card {
+    width: fit-content;
+    background-color: var(--white);
+    border: 1px solid var(--gray3);
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+}
+
+.movie-img {
+    vertical-align: bottom;
+    margin: 19px 20px 11px 20px;
+    border: 1px solid var(--gray3);
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+}
+
+.movie-info {
+    padding: 0 20px;
+}
+
+.movie-info h3{
+    font-size: 16px;
+    font-weight: 900;
+    margin-bottom: 12px;
+}
+
+.movie-info-detail {
+    font-size: 13px;
+    position: relative;
+    margin-bottom: 18px;
+}
+
+.movie-info-detail li {
+    margin-bottom: 5px;
+}
+
+.movie-info-detail span {
+    color: var(--gray4);
+}
+.movie-star-rate {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.movie-btn {
+    width: 100%;
+}
+
+.ticketing-btn {
+    width: 50%;
+    float: left;
+    text-align: center;
+    background-color: var(--gray1);
+    outline: 1px solid var(--gray3);
+    padding: 9px 0;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.teaser-btn {
+    width: 50%;
+    float: left;
+    background-color: var(--gray1);
+    outline: 1px solid var(--gray3);
+    padding: 9px 0;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+
+/*footer section*/
+footer {
+    background-color: var(--gray1);
+}
